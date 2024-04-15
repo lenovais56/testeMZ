@@ -1,0 +1,251 @@
+.cabecalho {
+    align-items: center;
+    background: inherit;
+    border-bottom: 1px solid var(--azul-escuro);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em 0;
+    width: 100vw;
+}
+
+.menu {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+
+/*Estilização do dropdown*/
+
+.menu__dropdown {
+    align-items: center;
+    color: var(--branco);
+    display: none;
+    background: var(--azul);
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 19.92px;
+    text-align: center;
+    position: absolute;
+    float:left;
+    top: 40px;
+}
+
+.menu__links--item:nth-child(1):hover .menu__dropdown {
+    display: flex;
+}
+    
+.menu__links--item:nth-child(5) a{
+    color: var(--azul);
+    font-weight: 700;
+}
+
+/*-----------------------------------------------------*/
+
+/*Estilização do dropdown Mobile*/
+.btn__submenu--mobile {
+    color: var(--branco);
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 0;
+}
+
+.menu__item--mobile {
+    flex-direction: column;
+}
+
+.menu__dropdown--mobile {
+    align-items: flex-start;
+    color: var(--branco);
+    display: none;
+    background: var(--azul);
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 19.92px;
+    text-align: center;
+}
+
+.dropdown__mobile--ativo {
+    display: flex;
+}
+
+/*-----------------------------------------------------*/
+
+
+/*Estilização searchbar*/
+
+.searchbar {
+    display: none;
+    transition: all .5s;
+    min-height: 0;
+    min-width: 0;
+}
+
+.searchbar__open {
+    display: flex;
+    background: var(--azul);
+    flex-direction: column;
+    gap: 24px;
+    min-height: 100%;
+    opacity: 90%;
+    padding: 32px 32px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 50vw;
+    z-index: 1;
+}
+
+.searchbar__container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.searchbar__close img{
+    width: 30px;
+}
+
+.searchbar__input {
+    background: transparent;
+    border: solid 1px var(--branco);
+    color: var(--branco);
+    outline: none;
+    padding: 8px;
+    width: 100%;
+}
+
+.searchbar__input::placeholder {
+    color: var(--branco);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 28.13px;
+    letter-spacing: 1px;
+}
+
+/*-----------------------------------------------------*/
+
+.btn__menu {
+    background: transparent;
+    border: none;
+    color: var(--azul);
+    cursor: pointer;
+    display: block;
+    font-size: 2em;
+    z-index: 2;
+}
+
+.menu__item--desktop {
+    display: none;
+}
+
+.btn__searchbar, .searchbar__close {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu__logo {
+    z-index: 2;
+}
+
+.menu__logo img{
+    width: 150px;
+}
+
+.menu__lista--mobile {
+    background: var(--preto-fundo);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: 0;
+    overflow-y: hidden;
+    right: 0;
+    transition: 1s ease-in-out;
+    visibility: hidden;
+    width: 85vw;
+    padding: 5em 2em;
+    position: absolute;
+    top: 0;
+}
+
+.menu__item--mobile a{
+    color: var(--branco);
+    font-size: 20px;
+}
+
+.searchbar__container--mobile input {
+    background: transparent;
+    border: solid 1px var(--cinza);
+    color: var(--branco);
+    outline: none;
+    padding: .5em;
+    width: 100%;
+}
+
+/* .open: classe de abertura do menu */
+.open {
+    height: 100vh;
+    transition: .6s ease-in-out;
+    visibility: visible;
+    z-index: 1;
+}
+
+/* ---------------------------------------------- */
+
+.menu__item {
+    color: var(--branco);
+    font-size: 1.5em;
+    font-weight: 500;
+    padding-top: 1.5em;
+    position: relative;
+    transition: all 300ms ease-in-out;
+}
+
+/* ----------------------------------------------------------------- */
+
+
+
+/* Media queries for responsive design */
+
+@media screen and (min-width: 1024px) {
+    .menu {
+        gap: 2em;
+        padding: 0 1em;
+        max-width: 1024px;
+    }
+
+    .btn__menu {
+        display: none;
+    }
+
+    .menu__item--desktop {
+        color: var(--branco);
+        display: block;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .menu__item--desktop:hover {
+        color: var(--azul);
+    }
+
+}

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>   
+    <meta name=description content="Teste Front end para MZ">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positron</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/base.css">
+
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="menu">
+            <a href="../../index.html" class="menu__logo">
+                <img src="assets/img/logo.png" alt="Logo da Positron" loading="lazy" class="logo">
+            </a>
+            <ul class="menu__links">
+                <li class="menu__links--item">
+                    <a href="#" class="menu__item--desktop">Who we are</a>
+                    <ul class="menu__dropdown">
+                        <li class="menu__dropdown--item">
+                            <a href="">Submenu</a>
+                        </li>
+                        <li class="menu__dropdown--item">
+                            <a href="">Submenu</a>
+                        </li>
+                        <li class="menu__dropdown--item">
+                            <a href="">Submenu</a>
+                        </li>
+                        <li class="menu__dropdown--item">
+                            <a href="">Submenu</a>
+                        </li>
+                        <li class="menu__dropdown--item">
+                            <a href="">Submenu</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu__links--item">
+                    <a href="#" class="menu__item--desktop">Our Team</a>
+                </li>
+                <li class="menu__links--item">
+                    <a href="#" class="menu__item--desktop">Portfolio</a>
+                </li>
+                <li class="menu__links--item">
+                    <a href="#" class="menu__item--desktop">Contact us</a>
+                </li>
+                <li class="menu__links--item">
+                    <a href="#" class="menu__item--desktop">EN</a>
+                </li>
+                <li class="menu__links--item">
+                    <button id="btn--searchbar" class="menu__item--desktop btn__searchbar">
+                        <img src="assets/img/search.svg" alt="">
+                    </button>
+                    <nav id="search--bar" class="searchbar">
+                        <div class="searchbar__container">
+                            <button id="searchbar--close" class="searchbar__close">
+                                <img src="assets/img/close-searchbar.svg" alt="">
+                            </button>
+                            <input class="searchbar__input" type="text" placeholder="Searh">
+                        </div>
+                    </nav>
+                </li>
+            </ul>
+
+            <button class="btn__menu material-icons-outlined" id="menu--mobile" onclick="menuShow()">menu</button>
+        </nav>
+
+        <ul class="menu__lista--mobile">
+            <li class="menu__item--mobile">
+                <button id="btn__submenu" class="btn__submenu--mobile">Who we are</button>
+                    <ul id="dropdown__mobile" class="menu__dropdown--mobile">
+                        <li class="menu__dropdown--item">
+                            <a href="">Submenu</a>
+                        </li>
+                        <li class="menu__dropdown--item">
+                            <a href="">Submenu</a>
+                        </li>
+                        <li class="menu__dropdown--item">
+                            <a href="">Submenu</a>
+                        </li>
+                        <li class="menu__dropdown--item">
+                            <a href="">Submenu</a>
+                        </li>
+                        <li class="menu__dropdown--item">
+                            <a href="">Submenu</a>
+                        </li>
+                    </ul>
+            </li>
+            <li class="menu__item--mobile">
+                <a href="#">Our Team</a>
+            </li>
+            <li class="menu__item--mobile">
+                <a href="#">Porfolio</a>
+            </li>
+            <li class="menu__item--mobile">
+                <a href="#">Contact us</a>
+            </li>
+            <li class="menu__item--mobile">
+                <a href="#">EN</a>
+            </li>
+            <li class="menu__item--mobile">
+                <div class="searchbar__container--mobile">
+                    <input class="searchbar__input--mobile" type="text" placeholder="Searh">
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="contents">
+        <section class="banner">
+            <!-- <div class="banner__container">
+                <h1 class="banner__titulo">Morbi leo mi, nonummy eget,</h1>
+                <p class="banner__subtitulo">orbi leo mi, nonummy eget, tristique non, rhoncus non, leo. Nullam faucibus mi quis velit. Integer in sapien. Fusce tellus odio, dapibus id,</p>
+            </div> -->
+            
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/fundo-banner.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block">
+                      <h5 class="banner__titulo">Morbi leo mi, nonummy eget,</h5>
+                      <p class="banner__subtitulo">orbi leo mi, nonummy eget, tristique non, rhoncus non, leo. Nullam faucibus mi quis velit. Integer in sapien. Fusce tellus odio, dapibus id,.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/fundo-banner-2.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block">
+                      <h5 class="banner__titulo">Morbi leo mi, nonummy eget,</h5>
+                      <p class="banner__subtitulo">orbi leo mi, nonummy eget, tristique non, rhoncus non, leo. Nullam faucibus mi quis velit. Integer in sapien. Fusce tellus odio, dapibus id,.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/fundo-banner-3.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block">
+                      <h5 class="banner__titulo">Morbi leo mi, nonummy eget,</h5>
+                      <p class="banner__subtitulo">orbi leo mi, nonummy eget, tristique non, rhoncus non, leo. Nullam faucibus mi quis velit. Integer in sapien. Fusce tellus odio, dapibus id,</p>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+
+              </div>
+        </section>
+
+        <section class="cards">
+            <ul class="cards__lista">
+                <li class="cards__item">
+                    <div class="cards__topo">
+                        <h2 class="cards__titulo">Results Center</h2>
+                        <button class="btn__cards">+</button>
+                    </div>
+                    <div class="cards__results">
+                        <div class="carrosel__results">
+                            <ul class="cards__carrosel">
+                                <button id="btn__cards--down" class="btn__results--up">
+                                    <img src="assets/img/arrow.svg" alt="">
+                                </button>
+                                <li id="cards__item" class="cards__item--carrosel card__ativo">
+                                        <h4 class="cards__tri--titulo">1T19</h4>
+                                </li>
+                                <li id="cards__item" class="cards__item--carrosel">
+                                        <h4 class="cards__tri--titulo">2T19</h4>
+                                </li>
+                                <li id="cards__item" class="cards__item--carrosel">
+                                        <h4 class="cards__tri--titulo">3T19</h4>
+                                </li>
+                                <li id="cards__item" class="cards__item--carrosel">
+                                        <h4 class="cards__tri--titulo">4T19</h4>
+                                </li>
+                                <button id="btn__cards--up" class="btn__results--down">
+                                    <img src="assets/img/arrow.svg" alt="">
+                                </button>
+                            </ul>
+                            <ul class="cards__info">
+                                <li id="card__info" class="cards__info--item card__info--ativo">
+                                    <p>• Morbi leo mi, nonummy eget 1</p>
+                                    <p>• Morbi leo mi, nonummy eget 1</p>
+                                    <p>• Morbi leo mi, nonummy eget 1</p>
+                                    <p>• Morbi leo mi, nonummy eget 1</p>
+                                </li>
+                                <li id="card__info" class="cards__info--item">
+                                    <p>• Morbi leo mi, nonummy eget 2</p>
+                                        <p>• Morbi leo mi, nonummy eget 2</p>
+                                        <p>• Morbi leo mi, nonummy eget 2</p>
+                                        <p>• Morbi leo mi, nonummy eget 2</p>
+                                </li>
+                                <li id="card__info" class="cards__info--item">
+                                        <p>• Morbi leo mi, nonummy eget 3</p>
+                                        <p>• Morbi leo mi, nonummy eget 3</p>
+                                        <p>• Morbi leo mi, nonummy eget 3</p>
+                                        <p>• Morbi leo mi, nonummy eget 3</p>
+                                </li>
+                                <li id="card__info" class="cards__info--item">
+                                    <p>• Morbi leo mi, nonummy eget 4</p>
+                                    <p>• Morbi leo mi, nonummy eget 4</p>
+                                    <p>• Morbi leo mi, nonummy eget 4</p>
+                                    <p>• Morbi leo mi, nonummy eget 4</p>
+                                </li>
+                            </ul>
+                        </div>                        
+                    </div>
+                </li>
+
+                <li class="cards__item">
+                    <div class="cards__topo">
+                        <h2 class="cards__titulo">News</h2>
+                        <button class="btn__cards">+</button>
+                    </div>
+                    <ul class="cards__lista2">
+                        <li class="cards__lista2--item">
+                            <p><span>30</span><br>may</p>
+                            <p>Nullam faucibus mi quis velit.</p>
+                        </li>
+                        <li class="cards__lista2--item">
+                            <p><span>30</span><br>may</p>
+                            <p>Nullam faucibus mi quis velit.</p>
+                        </li>
+                        <li class="cards__lista2--item">
+                            <p><span>30</span><br>may</p>
+                            <p>Nullam faucibus mi quis velit.</p>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="cards__item">
+                    <div class="cards__topo">
+                        <h2 class="cards__titulo">Next Events</h2>
+                        <button class="btn__cards">+</button>
+                    </div>
+                    <ul class="cards__lista3">
+                        <li class="cards__lista3--item">
+                            <p>Fusce tellus odio, dapibus id, fermentum quis</p>
+                            <span>03/10</span>
+                        </li>
+                        <li class="cards__lista3--item">
+                            <p>Fusce tellus odio, dapibus id, fermentum quis</p>
+                            <span>03/10</span>
+                        </li>
+                        <li class="cards__lista3--item">
+                            <p>Fusce tellus odio, dapibus id, fermentum quis</p>
+                            <span>03/10</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="access">
+            <h1 class="access__titulo">Quick Access</h1>
+            <ul class="access__lista">
+                <li class="access__item">
+                    <img class="access__img" src="assets/img/results-icon.svg" alt="">
+                    <p>Presentations</p>
+                </li>
+                <li class="access__item">
+                    <img class="access__img" src="assets/img/graphs-icon.svg" alt="">
+                    <p>Graphs</p>
+                </li>
+                <li class="access__item">
+                    <img class="access__img" src="assets/img/repports-icon.svg" alt="">
+                    <p>Repports</p>
+                </li>
+                <li class="access__item">
+                    <img class="access__img" src="assets/img/archives-icon.svg" alt="">
+                    <p>Archives</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="contact">
+            <div class="contact__container">
+                <div class="contact__box">
+                    <h3 class="contact__titulo">Contact US</h3>
+                    <p>Morbi leo mi, nonummy eget, tristique non, rhoncus non, leo. Nullam faucibus mi quis velit</p>
+                    <button class="btn__contact">Contact US</button>
+                </div>
+                <div class="contact__box">
+                    <h3 class="contact__titulo">Mailing list</h3>
+                    <form class="formulario" action="">
+                        <input type="text" name="Name" id="" placeholder="Name">
+                        <input type="email" name="Email" id="" placeholder="Email">
+                    </form>
+                    <button class="btn__contact">Send</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <nav id="sitemap-bar" class="sitemapbar">
+            <div class="topo__sitemap--bar">
+                <h3 class="titulo__sitemap">Site map</h3>
+                <button id="sitemap--close" class="sitemap__close" href="">
+                    <img src="assets/img/close-searchbar.svg" alt="">
+                </button>
+            </div>
+            <ul class="sitemap__lista">
+                <li class="sitemap__item">
+                    <a class="sitemap__item--titulo" href="">Who we are</a>
+                    <ul class="sitemap__submenu">
+                    <li class="sitemap__submenu--item">
+                        <a href="">Submenu</a>
+                        <a href="">Submenu</a>
+                        <a href="">Submenu</a>
+                        <a href="">Submenu</a>
+                        <a href="">Submenu</a>
+                        <a href="">Submenu</a>
+                    </li>
+                    </ul>
+                </li>
+                <li class="sitemap__item">
+                    <a class="sitemap__item--titulo"  href="">Our team</a>
+                    <ul class="sitemap__submenu">
+                        <li class="sitemap__submenu--item">
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sitemap__item">
+                    <a class="sitemap__item--titulo"  href="">Porfolio</a>
+                    <ul class="sitemap__submenu">
+                        <li class="sitemap__submenu--item">
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sitemap__item">
+                    <a class="sitemap__item--titulo"  href="">Contact us</a>
+                    <ul class="sitemap__submenu">
+                        <li class="sitemap__submenu--item">
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                            <a href="">Submenu</a>
+                        </li>
+                    </ul>
+                </li> 
+            </ul>
+        </nav>
+        <section class="rodape">
+            <div class="rodape__container">
+                <ul class="rodape__links">
+                    <li class="rodape__item">
+                        <a href="">Contact us</a>
+                    </li>
+                    <li class="rodape__item">
+                        <a href="">Annual Reports</a>
+                    </li>
+                    <li class="rodape__item">
+                        <button id="btn__sitemap" class="btn__sitemap--open">
+                            Site Map
+                        </button>
+                    </li>
+                </ul>
+                <div class="rodape__social">
+                    <a href="#">
+                        <img src="assets/img/facebook-icon.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/img/twitter-icon.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/img/linkedin-icon.png" alt="">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="rodape__copyright">
+                <p>Positron - Copyright 2019</p>
+            </div>
+        </section>
+    </footer>
+
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/searchbar.js"></script>
+    <script src="assets/js/sitemapbar.js"></script>
+    <script src="assets/js/cards.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
